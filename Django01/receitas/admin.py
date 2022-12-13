@@ -5,7 +5,7 @@ from .models import Receita
 class ListandoReceitas(admin.ModelAdmin):
 
     #lista dois items que iram aparecer no admin
-    list_display = ('id', 'nome_receita', 'categoria', 'tempo_de_preparo')
+    list_display = ('id', 'nome_receita', 'categoria', 'tempo_de_preparo', 'publicado')
 
     #lista de valores que pode ser usado para abrir a tabela
     list_display_links = ('id', 'nome_receita')
@@ -17,7 +17,9 @@ class ListandoReceitas(admin.ModelAdmin):
     list_filter = ('categoria', )
 
     #paginação da aréa do admin
-    list_per_page = 2
+    list_per_page = 5
+    #lista de compos que pode ser editado para
+    list_editable = ('publicado',)
 
 
 admin.site.register(
