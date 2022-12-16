@@ -24,7 +24,7 @@
                                 <div class="single-best-receipe-area mb-30">
 
                                     {% if receita.foto_receita == '' %}
-                                        <img src="{% static 'img/bg-img/foto_receita.png' %}">
+                                        <img src="{% static 'img/bg-img/foto_receita.png' %}" width="300px" height="380px">
                                     {% else %}
                                         <img src="{{ receita.foto_receita.url }}" alt="">
                                     {% endif %}
